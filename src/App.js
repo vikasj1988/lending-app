@@ -1,21 +1,18 @@
 import "./App.css";
-import { Outlet, Route, Routes } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import LoginComponent from "./components/login/login";
 import DashboardComponent from "./components/dashboard/dashboard";
+import HomeComponent from "./components/home/home";
 
 function App() {
   return (
-    <LoginComponent />
-    // <Routes>
-    //   <Route path="/" element={<Home />}>
-    //     <Route path="login" element={<LoginComponent />}/>
-    //     <Route path="dashboard" element={<DashboardComponent />}/>
-    //   </Route>
-    // </Routes>
+    <Routes>
+      <Route exact path="/home" element={<HomeComponent />}></Route>
+      <Route path="/login" element={<LoginComponent />}></Route>
+      <Route path="/dashboard" element={<DashboardComponent />}></Route>
+      <Route path="/" element={<LoginComponent />}></Route>
+    </Routes>
   );
 }
 
-function Home() {
-  return <Outlet />;
-}
 export default App;

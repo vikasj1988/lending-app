@@ -1,8 +1,4 @@
-const DashboardComponent=()=>{
-    return(
-        <div>
-            Dashboard
-        </div>
-    )
-}
-export default DashboardComponent ;
+const DashboardComponent = () => {
+  return <div>Dashboard Component</div>;
+};
+export default DashboardComponent;
