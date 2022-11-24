@@ -1,4 +1,5 @@
 // variable to store our intervalID
+import "./main.css";
 let nIntervId;
 
 function changeColor() {
