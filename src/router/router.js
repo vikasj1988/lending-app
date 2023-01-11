@@ -11,8 +11,6 @@ render(
       <Route path="/" element={<App />}>
         <Route path="login" element={<LoginComponent />}></Route>
         <Route path="dashboard" element={<DashboardComponent />}></Route>
-        <Route path="header" element={<HeaderComponent />}></Route>
-        <Route path="header" element={<HeaderComponent />}></Route>
       </Route>
     </Routes>
   </BrowserRouter>,

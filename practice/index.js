@@ -4,7 +4,8 @@
 //let str = "Its a JavaScript Program".split("");
 
 const myTimer = setTimeout(function () {
-  let arr = ["a", "b", "c", "d", "e"];
+  // let arr = ["a", "b", "c", "d", "e"];
+  let arr = prompt("Input array string");
   for (let i = 0; i < arr.length; i++) {
     (function (i) {
       setTimeout(() => {

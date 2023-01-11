@@ -4,7 +4,7 @@ import { useState } from "react";
 //import LoginIcon from "@mui/icons-material/Login";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import { LoginOutlined } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 //import "./login.css";
 const LoginComponent = () => {
   const [isSignup, setIsSignp] = useState(false);
@@ -15,19 +15,20 @@ const LoginComponent = () => {
     email: "",
     password: "",
   });
-  const handleChange = (e) => {
-    setInputs((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
+  const handleChange = (event) => {
+    //input is depends on previous inputstate which is calling the updating function(name:'',email:'',password:'')its previous state now
+    //this will return new state line 22 and 23 always give u updated prevsstate
+    setInputs((prevState) => {
+      return { ...prevState, [event.target.name]: event.target.value };
+    });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (inputs.email !== "" && inputs.password !== "") {
       setIsLogin(true);
       sessionStorage.setItem("username", inputs.email);
       sessionStorage.setItem("isLoggedIn", true);
-      navigate("/dashboard");
+      navigate("/header");
     }
     console.log(inputs);
   };

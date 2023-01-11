@@ -11,8 +11,6 @@ function App() {
       <Route exact path="/home" element={<HomeComponent />}></Route>
       <Route path="/login" element={<LoginComponent />}></Route>
       <Route path="/dashboard" element={<DashboardComponent />}></Route>
-      <Route path="/header" element={<HeaderComponent />}></Route>
-      <Route path="/" element={<LoginComponent />}></Route>
     </Routes>
   );
 }
